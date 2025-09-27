@@ -67,3 +67,69 @@ sudo subscription-manager attach --auto
 ```
 
 This ensures your system is entitled and can pull packages from Red Hat’s repositories.
+
+
+Step 2: Using RHEL on Azure
+
+When you deploy RHEL from the Azure Marketplace, your VM is automatically registered and attached to Red Hat Subscription Management (RHSM).
+
+✅ This means:
+
+No need to manually register with subscription-manager.
+
+Repositories are pre-enabled by default.
+
+Updates and content are synchronized directly through Red Hat and Azure integration.
+
+👉 You can confirm which repositories are available with:
+
+
+```bash
+sudo dnf repolist
+```
+This will list all enabled repositories that are ready to use.
+Step 3: Enabled Repositories in Azure
+
+On RHEL 8 and 9 images from Azure, the following repositories are available by default (so you don’t need to enable them manually):
+
+rhel-8-for-x86_64-baseos-rpms (or rhel-9-for-x86_64-baseos-rpms)
+
+rhel-8-for-x86_64-appstream-rpms (or rhel-9-for-x86_64-appstream-rpms)
+
+ansible-2.9-for-rhel-8-x86_64-rpms (for RHEL 8 Ansible support)
+
+ansible-automation-platform-2.0-for-rhel-8-x86_64-rpms (if using Ansible Automation Platform)
+
+👉 Since I’m on Azure, these repos are already available and I can install Ansible directly without extra steps:
+
+```bash
+sudo dnf install -y ansible
+```
+For non-Azure platforms, you’d need to enable repos manually,
+```bash
+sudo subscription-manager repos --enable=rhel-9-for-x86_64-appstream-rpms
+sudo subscription-manager repos --enable=rhel-9-for-x86_64-baseos-rpms
+```
+
+# ⚙️ Setting up a Control Node for Ansible
+
+Before running playbooks, you need to prepare a **control node** and ensure smooth connectivity to your **managed nodes**.
+
+---
+
+## 🔑 1. Remote Connectivity via SSH
+- Ansible uses **SSH** to connect to remote Linux servers.  
+- Ensure you can log in from the control node to managed nodes without password prompts (use SSH keys).  
+
+Example (from control node):
+```bash
+ssh-copy-id user@managed-server
+ssh user@managed-server
+```
+## NOTE
+
+## 🖥️ What is a Control Node?
+The **control node** is the machine where Ansible is installed and from which you run your automation.  
+- It stores your **playbooks**, **inventory files**, and **configuration**.  
+- It does **not** need to be powerful, since most tasks are executed on the managed nodes.  
+- The control node connects to managed nodes (remote systems) using **SSH** and executes tasks defined in your playbooks.  
