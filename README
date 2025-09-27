@@ -49,3 +49,21 @@ If you're also on an Ansible or DevOps journey, let’s connect:
 - **GitHub**: [https://github.com/arnold-O/Ansible-repo.git]  
 
 ---
+
+
+# 📘 Day One: Using Red Hat in Azure with Subscription Manager
+
+On my Ansible journey, I’m starting with **Red Hat Enterprise Linux (RHEL) running on Azure**.  
+This README documents the first setup steps for working with RHEL in the cloud and preparing it for automation with Ansible.  
+
+---
+
+## 🛠️ Step 1: Register RHEL with Subscription Manager
+Normally, when running RHEL outside Azure, you need to attach a subscription so you can access Red Hat software repositories.  
+
+```bash
+sudo subscription-manager register --username <RHSM-USERNAME> --password <RHSM-PASSWORD>
+sudo subscription-manager attach --auto
+```
+
+This ensures your system is entitled and can pull packages from Red Hat’s repositories.
