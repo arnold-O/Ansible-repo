@@ -1,0 +1,51 @@
+# 🚀 My Ansible Journey
+
+Welcome to my Ansible learning and project repository!  
+This repo documents my hands-on journey with **Ansible**, from basic playbooks to advanced automation for system administration, cloud, and DevOps workflows.  
+
+---
+
+## 📌 Goals of This Repository
+- Learn and practice **Ansible fundamentals** (inventory, ad-hoc commands, playbooks).  
+- Build reusable **roles** and **collections**.  
+- Automate common tasks in **Linux administration** and **cloud environments** (Azure, AWS).  
+- Share examples, experiments, and notes as I grow my skills.  
+
+---
+
+## 📂 Repository Structure
+---
+
+## 🛠️ Tech Stack
+- **Ansible** (latest stable version)  
+- **Linux (RHEL/Ubuntu)**  
+- **Cloud Platforms**: Azure, AWS (as I progress)  
+- **Version Control**: GitHub for tracking and collaboration  
+
+---
+
+## 📖 Learning Roadmap
+I’m currently following **Sanders van Vugt’s Ansible course on O’Reilly**.  
+If you’re also learning Ansible, I highly recommend checking it out—it’s structured, practical, and beginner-friendly.  
+
+1. ✅ Ansible Basics (ad-hoc commands, YAML syntax, inventory).  
+2. 🔄 Playbooks for common Linux admin tasks (users, packages, services).  
+3. 🏗️ Roles and variables for reusability.  
+4. ☁️ Cloud integrations (Azure/AWS modules).  
+5. 📦 Collections and CI/CD with Ansible.  
+
+---
+
+## ✨ Notes
+- This repository will evolve as I learn.  
+- Mistakes and experiments are part of the process 🚀.  
+- Contributions, tips, and feedback are always welcome!  
+
+---
+
+## 📬 Connect
+If you're also on an Ansible or DevOps journey, let’s connect:  
+- **LinkedIn**: [linkedin.com/in/arnoldoghiator] 
+- **GitHub**: [https://github.com/arnold-O/Ansible-repo.git]  
+
+---
