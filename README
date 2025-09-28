@@ -133,3 +133,16 @@ The **control node** is the machine where Ansible is installed and from which yo
 - It stores your **playbooks**, **inventory files**, and **configuration**.  
 - It does **not** need to be powerful, since most tasks are executed on the managed nodes.  
 - The control node connects to managed nodes (remote systems) using **SSH** and executes tasks defined in your playbooks.  
+
+
+
+✅ Created a dedicated ansible user.
+
+✅ Added it to the wheel group for root privileges (Wheel group in RHEL grants root/sudo privileges).
+
+✅ Configured optional passwordless sudo.
+
+✅ Enabled SSH key-based access for security.
+
+✅ Verified root access through Ansible.
+
