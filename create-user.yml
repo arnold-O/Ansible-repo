@@ -1,0 +1,10 @@
+---
+- name: Create a user playbook
+  hosts: localhost
+  tasks:
+    - name: create a simple user
+      user:
+        name: great
+        state: present
+        shell: /bin/sh
+
