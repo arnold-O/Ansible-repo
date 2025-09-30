@@ -146,3 +146,12 @@ The **control node** is the machine where Ansible is installed and from which yo
 
 ✅ Verified root access through Ansible.
 
+
+
+## To get all the modules that are currently installed in your system use 
+
+```bash 
+ansible-doc -l
+```
+For additional modules kindly visit:
+[visit the link](https://galaxy.ansible.com)
