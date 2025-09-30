@@ -188,3 +188,15 @@ Idempotence: Ensures changes are only applied when needed (e.g., no reinstalling
 Written in YAML: YAML is a Markup Language.
 
 Follows a declarative style
+
+
+## Using Ansible with Azure Modules
+Installed Azure CLI & Ansible collection.
+
+Created a Service Principal for automation.
+
+Configured Ansible with Azure credentials.
+
+Wrote and ran a playbook to create a resource group.
+
+Now you can extend this to create VMs, networks, storage, and more using Ansible Azure modules.
