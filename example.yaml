@@ -1,0 +1,10 @@
+---
+- name: This is the structure/workflow of the plays
+  hosts: localhost
+  tasks:
+    - name: This is the first task in the playbook
+      debug:
+        msg: Hello from the first task
+    - name: This is the second task in the playbook
+      debug:
+        msg: Hello from second Task
